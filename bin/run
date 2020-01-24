@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require_relative "../config/environment"
+# require_relative "../db/"
+
+# create a new bird...
+Bird.create_table
+
+bird = Bird.new({
+    name: "Sally",
+    species: "Ostrich",
+    gender: "Female",
+    age: "30"
+  })
+
+new_bird = bird.save
+
+Pry.start
